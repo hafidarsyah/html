@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" required />
+      <br />
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        required
+      />
+      <br />
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        name="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+        minlength="3"
+        required
+      />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
